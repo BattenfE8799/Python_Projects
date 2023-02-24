@@ -445,3 +445,39 @@ for alien_number in range(30):
     new_alien = {'color':'green','points':5,'speed':'slow'}
     aliens.append(new_alien)
 
+print(f"There are now {len(aliens)} aliens.")
+#changes green aliens to yellow
+for alien in aliens[:3]:
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow'
+        alien['speed'] = 'medium'
+        alien['points'] = '10'
+        
+for alien in aliens[-3:]:
+    print(alien)
+print("...")
+
+#list in a dictionary
+pizza = {'crust': 'thick','toppings':['mushrooms','extra cheese']}
+print(f"you ordered a {pizza['crust']}-crust pizza "
+      "with the following toppings:")
+for topping in pizza['toppings']:
+    print(f'\t{topping}')
+    
+fav_language = {
+    'jen':['python','ruby'],
+    'sarah':['c'],
+    'edward':['ruby','go'],
+    'phil':['python','haskell'],}
+
+for name, languages in  fav_language.items():
+    print(f"\n{name.title()}'s fravorite languages are:")
+    for language in languages:
+        print(f"\t{language.title()}")
+        
+#dictionary in a dictionary
+dict_invintory = {'sword':{'state':'shiny','weight':'6','value':'5'},'shield':{'state':'hardy','weight':'5','value':'15'}}
+
+for item, info in dict_invintory.items():
+    print(f"{item}: state: {info['state']}, weight: {info['weight']}, value: {info['value']}")
+    
